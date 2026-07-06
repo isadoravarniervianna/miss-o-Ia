@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(145deg, #0b0f1a 0%, #1a1f2f 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.mission-card {
+  max-width: 1000px;
+  width: 100%;
+  background: rgba(22, 28, 46, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 2.5rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(120, 180, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.2s ease;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #b3d9ff, #7aa9ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid rgba(100, 160, 255, 0.2);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.8rem;
+}
+
+h1 small {
+  font-size: 0.9rem;
+  background: rgba(60, 130, 255, 0.15);
+  padding: 0.2rem 1rem;
+  border-radius: 40px;
+  color: #8ab4ff;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-left: 0.75rem;
+}
+
+.subtitle {
+  color: #a0bbdd;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 0.2rem;
+  border-left: 4px solid #3f7eff;
+  padding-left: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  transition: 0.3s;
+}
+
+.grid-ia {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 720px) {
+  .mission-card { padding: 1.5rem; }
+  .grid-ia { grid-template-columns: 1fr; gap: 2rem; }
+  h1 { font-size: 1.8rem; flex-wrap: wrap; }
+}
+
+/* lista de ferramentas IA */
+.ia-list {
+  background: rgba(12, 18, 34, 0.6);
+  border-radius: 1.8rem;
+  padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+  border: 1px solid rgba(70, 130, 255, 0.15);
+  backdrop-filter: blur(2px);
+}
+
+.ia-list h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7f9ed0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ia-list h2 span {
+  background: #2a3a60;
+  border-radius: 30px;
+  padding: 0.1rem 0.8rem;
+  font-size: 0.75rem;
+  color: #b8d0ff;
+}
+
+#iaToolList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+#iaToolList li {
+  background: rgba(32, 44, 72, 0.5);
+  padding: 0.7rem 1rem 0.7rem 1.2rem;
+  border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #3f7eff;
+  color: #e3edff;
+  font-weight: 400;
+  transition: 0.2s;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#iaToolList li:hover {
+  background: rgba(50, 70, 120, 0.5);
+  border-left-color: #7aaaff;
+  transform: scale(1.01);
+}
+
+.tool-category {
+  font-size: 0.7rem;
+  background: #1e2b44;
+  padding: 0.2rem 0.9rem;
+  border-radius: 30px;
+  color: #9db9f0;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+
+.empty-message {
+  color: #6a7faa;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-style: italic;
+}
+
+/* painel de reflexão / dom */
+.reflection-panel {
+  background: rgba(8, 14, 28, 0.7);
+  border-radius: 1.8rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(70, 130, 255, 0.12);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+}
+
+.reflection-panel h2 {
+  color: #b3d0fc;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: -0.2px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.reflection-panel h2 i {
+  font-style: normal;
+  background: #1a2b4a;
+  padding: 0 0.8rem;
+  border-radius: 40px;
+  font-size: 0.75rem;
+  color: #8bb2ff;
+}
+
+#reflectionMessage {
+  background: #0b1325;
+  padding: 1rem 1.2rem;
+  border-radius: 1.2rem;
+  color: #c6d9ff;
+  line-height: 1.5;
+  min-height: 5rem;
+  border-left: 3px solid #3f7eff;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1.2rem 0;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.btn {
+  background: #1f3152;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 60px;
+  color: #dfebff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid transparent;
+  flex: 1 0 auto;
+  justify-content: center;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+  background: #2d4b8a;
+  border-color: #4a7aff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(50, 100, 255, 0.25);
+}
+
+.btn-primary:hover {
+  background: #3b5faa;
+  transform: scale(1.02);
+  border-color: #7aaaff;
+}
+
+.btn-secondary {
+  background: #1d2842;
+  border-color: #3f5a8a;
+}
+
+.btn-secondary:hover {
+  background: #2c3c62;
+  border-color: #6a8ed0;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #3a5a8a;
+  color: #b0caff;
+}
+
+.btn-outline:hover {
+  background: #17213a;
+  border-color: #6f94e0;
+}
+
+.footer-mission {
+  margin-top: 2.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(100, 150, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  color: #5b74a0;
+  font-size: 0.85rem;
+}
+
+.badge-ia {
+  background: #1a2744;
+  padding: 0.2rem 1rem;
+  border-radius: 60px;
+  color: #8bb2ff;
+  font-weight: 400;
+  border: 1px solid #2b4580;
+}
+
+.highlight {
+  color: #9bbaff;
+}
+
+.count-badge {
+  background: #1a2b4a;
+  padding: 0.2rem 0.8rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+}

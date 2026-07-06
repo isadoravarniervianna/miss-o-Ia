@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missão IA · Alura Start</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mission-card">
+
+    <h1>
+      🤖 Missão IA
+      <small>Start · Alura</small>
+    </h1>
+    <div class="subtitle">
+      ⚡ Funções · DOM · Reflexão — Use a IA para resolver problemas reais
+    </div>
+
+    <div class="grid-ia">
+      <!-- COLUDA ESQUERDA: LISTA DE OBJETOS (ferramentas IA) -->
+      <div class="ia-list">
+        <h2>
+          🧰 Ferramentas IA
+          <span id="toolCounter">0</span>
+        </h2>
+        <ul id="iaToolList">
+          <!-- renderizado via JS -->
+        </ul>
+        <div style="margin-top: 1.2rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary" id="addToolBtn">➕ Adicionar ferramenta</button>
+          <button class="btn btn-outline" id="resetToolsBtn">↺ Restaurar</button>
+        </div>
+        <p style="color: #59709a; font-size: 0.75rem; margin-top: 0.8rem; padding-left: 0.2rem;">
+          <span style="display: inline-block; background: #14203a; padding: 0.1rem 0.8rem; border-radius: 40px;">⬤ lista de objetos JS</span>
+        </p>
+      </div>
+
+      <!-- COLUNA DIREITA: REFLEXÃO + DOM -->
+      <div class="reflection-panel">
+        <h2>
+          🧠 Refletir sobre IA
+          <i>diário</i>
+        </h2>
+        <div id="reflectionMessage">
+          💡 Clique em "Gerar reflexão" para pensar como a IA ajuda no dia a dia.
+        </div>
+        <div class="action-row">
+          <button class="btn btn-primary" id="generateReflectionBtn">✨ Gerar reflexão</button>
+          <button class="btn btn-outline" id="clearReflectionBtn">🗑️ Limpar</button>
+        </div>
+        <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary" id="domManipulateBtn">🎯 Manipular DOM</button>
+          <span class="badge-ia" id="domFeedback">pronto</span>
+        </div>
+        <p style="color: #5b74a0; font-size: 0.75rem; margin-top: 0.8rem; border-top: 1px solid #1f2d4a; padding-top: 0.6rem;">
+          ⚙️ funções · métodos DOM · lista de objetos
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-mission">
+      <span>🧩 <span class="highlight">Unidade de Funções</span> — dividir problemas grandes em menores</span>
+      <span class="count-badge" id="totalToolsDisplay">0 ferramentas</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
